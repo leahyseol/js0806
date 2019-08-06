@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//전역변수
+	var num = 10;
+	//전역함수
+	function btnClicked() {
+		func2();
+
+		//지역변수
+		var a = 10;
+		a = 'String';
+		a = true;
+		//func(a);
+
+		//지역함수
+		function func2() {
+			alert('func2() 호출됨');
+		}
+		func(func2);
+	}
+
+	function func(a) {
+		alert(a);
+	}
+</script>
+</head>
+<body>
+
+	<button type="button" onclick="btnClicked();">Button</button>
+
+</body>
+</html>

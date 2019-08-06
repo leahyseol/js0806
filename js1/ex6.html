@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//자바스크립트 내장객체;Array, data, String,math 
+
+	//배열 - Array{length/join(), sort(), reverse(), concat(),slice()}
+	// ->자바의 배열이 아닌 list collection에 가깝다.
+
+	//배열 리스트 객체 생성
+	var arr = new Array();
+	arr[0] = 10;
+	arr[1] = 20;
+	arr[2] = 30;
+	arr[3] = 40;
+	arr[4] = 50;
+
+	document.write(arr[0] + '<br>');
+
+	for (var i = 0; i < arr.length; i++) {
+		document.write('arr[' + i + ']=' + arr[i] + '<br>');
+	}
+
+	var arr2 = new Array(1, 2, 3, 4, 5);
+	for (var i = 0; i < arr.length; i++) {
+		document.write('arr[' + i + ']=' + arr2[i] + '<br>');
+	}
+	var arr3 = new Array(6, 7, 8, 9, 10);
+	for (var i = 0; i < arr.length; i++) {
+		document.write('arr[' + i + ']=' + arr3[i] + '<br>');
+	}
+
+	//for-each : array(=java list), object(=map) 
+	for ( var key in arr3) { //index is key value in array. 
+		document.write(arr3[key] + '<br>');
+	}
+
+	document.write('배열크기:' + arr.length + '<br>');
+
+	//배열연결 join()
+	document.write(arr.join() + '<br>');
+	document.write(arr.join('#') + '<br>');
+
+	//배열 요소의 순서 반대로
+	arr.reverse();
+	document.write(arr.join() + '<br>');
+
+	//정렬
+	arr.sort();
+	document.write(arr.join() + '<br>');
+
+	//slice
+	var sli = arr.slice(1, 4); //[40,30,20]
+	document.write(sli.join() + '<br>');
+
+	//배열 합치기 concat()
+	var con = arr2.concat(arr3);
+	document.write(con.join() + '<br>');
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

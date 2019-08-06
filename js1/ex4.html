@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function calc() {
+		var inputX = document.getElementById('x');
+		var strX = inputX.value;
+
+		var strY = document.getElementById('y').value;
+		var sum;
+		sum = parseInt(strX) + parseInt(strY);
+
+		document.getElementById('sum').value = sum;
+
+	}
+</script>
+</head>
+<body>
+	<h3>calculator</h3>
+
+	1st integer:
+	<input id="x" value="">
+	<br> 2nd integer:
+	<input id="y" value="">
+	<br> total:
+	<input id="sum">
+	<br>
+	<button type="button" onclick="calc();">total</button>
+</body>
+</html>
